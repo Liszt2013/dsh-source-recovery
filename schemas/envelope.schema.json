@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsh-source-recovery.invalid/schemas/envelope.schema.json",
+  "title": "dsh-source-recovery stable JSON envelope",
+  "type": "object",
+  "required": ["ok", "code", "message", "formatVersion", "backend", "warnings", "generatedAt"],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "formatVersion": { "const": "source-recovery/1" },
+    "backend": { "type": "string" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "generatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": true
+}

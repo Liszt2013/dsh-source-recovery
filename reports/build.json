@@ -1,0 +1,211 @@
+{
+  "generatedAt": "2026-11-21T08:23:26.713Z",
+  "ok": true,
+  "checks": [
+    {
+      "id": "syntax:bin\\cli.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:client.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:index.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\api.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\archive.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\backends.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\bundle.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\config.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\doctor.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\dotnet.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\errors.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\firmware.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\fixtures.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\identify.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\levels.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\lock.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\policy.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\proc.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\recovery.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\report.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\selftest.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\sourcemap.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\util.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:lib\\zipwrite.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\acceptance.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\build.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\pack-check.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\run-tests.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\secret-scan.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:scripts\\skill-load-probe.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:test\\core.test.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "syntax:test\\integration.test.mjs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:dsh.plugin.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:locale\\en.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:locale\\zh.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:package-lock.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:package.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:schemas\\envelope.schema.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:schemas\\evidence.schema.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "json:schemas\\report.schema.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "selftest:core",
+      "ok": true,
+      "detail": "all core checks passed"
+    }
+  ]
+}

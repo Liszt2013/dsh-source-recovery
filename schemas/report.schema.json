@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsh-source-recovery.invalid/schemas/report.schema.json",
+  "title": "dsh-source-recovery report",
+  "type": "object",
+  "required": ["schema", "generatedAt", "target", "recoveryCeiling", "plan", "gaps", "policy", "backends", "unknowns"],
+  "properties": {
+    "schema": { "const": "dsh-source-recovery/report/1" },
+    "generatedAt": { "type": "string" },
+    "target": {
+      "type": "object",
+      "required": ["name", "size", "sha256", "family", "kind"],
+      "properties": {
+        "name": { "type": "string" },
+        "size": { "type": "integer", "minimum": 0 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "family": { "type": "string" },
+        "kind": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "recoveryCeiling": {
+      "type": "object",
+      "required": ["level", "name", "description"],
+      "properties": {
+        "level": { "enum": ["S0", "S1", "S2", "S3", "S4"] },
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "plan": { "type": "array" },
+    "gaps": { "type": "array" },
+    "policy": { "type": "object" },
+    "backends": { "type": "object" },
+    "unknowns": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

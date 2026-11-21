@@ -1,0 +1,39 @@
+{
+  "name": "dsh-source-recovery",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Reverse everything toward source: a DSH workbench for authorized source recovery from APK, JS/Electron, .NET, native, firmware and archives, with honest recovery levels.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cli": "./bin/cli.js",
+    "./package.json": "./package.json",
+    "./locale/*": "./locale/*"
+  },
+  "bin": { "dsh-source-recovery": "./bin/cli.js" },
+  "files": [
+    "index.js", "client.js", "bin", "lib", "skills", "examples", "schemas", "locale/*.json", "icon.svg",
+    "cordis.patch.yml", "dsh.plugin.json", "README.md", "README.en.md",
+    "THREAT-MODEL.md", "SECURITY.md", "COMPATIBILITY.md", "KNOWN-LIMITATIONS.md",
+    "THIRD-PARTY-NOTICES.md", "LICENSE"
+  ],
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "selftest": "node bin/cli.js selftest --json",
+    "doctor": "node bin/cli.js doctor --json",
+    "capabilities": "node bin/cli.js capabilities --json",
+    "build": "node scripts/build.mjs",
+    "pack:check": "node scripts/pack-check.mjs",
+    "secret-scan": "node scripts/secret-scan.mjs",
+    "acceptance": "node scripts/acceptance.mjs"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "inject": ["@deepseek-ai/dsh-client-ui-sidebar", "@deepseek-ai/dsh-client-ui-layout", "@deepseek-ai/dsh-client-ui-renderer"] }
+  },
+  "keywords": ["dsh-plugin", "reverse-engineering", "source-recovery", "apk", "electron", "decompiler", "workbench"]
+}

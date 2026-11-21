@@ -1,0 +1,26 @@
+{
+  "id": "dsh-source-recovery",
+  "name": "Source Recovery Workbench",
+  "version": "0.2.0",
+  "description": "Reverse everything toward source: identify targets, recover exact or near-source artifacts, extract safely, and report evidence with honest levels.",
+  "main": "./index.js",
+  "entry": "./index.js",
+  "engines": { "dsh": ">=0.2.2-rc.5" },
+  "capabilities": ["source-recovery", "reverse-engineering", "decompilation"],
+  "targets": ["apk", "jar", "electron", "asar", "dotnet", "native", "firmware", "archive"],
+  "contributes": {
+    "tools": [
+      "reverse_capabilities",
+      "reverse_doctor",
+      "reverse_identify",
+      "reverse_extract",
+      "reverse_decompile",
+      "reverse_sourcemap",
+      "reverse_report",
+      "reverse_bundle",
+      "reverse_verify",
+      "reverse_selftest"
+    ],
+    "skills": ["dsh-source-recovery"]
+  }
+}

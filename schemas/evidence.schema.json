@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dsh-source-recovery.invalid/schemas/evidence.schema.json",
+  "title": "dsh-source-recovery evidence bundle manifest",
+  "type": "object",
+  "required": ["schema", "bundleVersion", "generatedAt", "pluginVersion", "target", "recovery", "tools", "policy", "artifacts", "report", "bundleDigest"],
+  "properties": {
+    "schema": { "const": "dsh-source-recovery/evidence/1" },
+    "bundleVersion": { "const": 1 },
+    "generatedAt": { "type": "string" },
+    "pluginVersion": { "type": "string" },
+    "target": {
+      "type": "object",
+      "required": ["name", "size", "sha256", "family", "kind"],
+      "properties": {
+        "name": { "type": "string" },
+        "size": { "type": "integer", "minimum": 0 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "family": { "type": "string" },
+        "kind": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "recovery": {
+      "type": "object",
+      "required": ["ceiling", "achieved", "plan", "gaps"],
+      "properties": {
+        "ceiling": {
+          "type": "object",
+          "required": ["level", "name", "description"],
+          "properties": {
+            "level": { "enum": ["S0", "S1", "S2", "S3", "S4"] },
+            "name": { "type": "string" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "achieved": { "enum": ["S0", "S1", "S2", "S3", "S4", null] },
+        "note": { "type": "string" },
+        "plan": { "type": "array" },
+        "gaps": { "type": "array" }
+      },
+      "additionalProperties": true
+    },
+    "tools": { "type": "object" },
+    "policy": { "type": "object" },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "report": {
+      "type": "object",
+      "required": ["markdownSha256", "jsonSha256"],
+      "properties": {
+        "markdownSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "jsonSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "bundleDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "additionalProperties": true
+}

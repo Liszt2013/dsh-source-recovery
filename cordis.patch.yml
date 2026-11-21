@@ -1,0 +1,5 @@
+# dsh-source-recovery bundle patch.
+# Adds one host plugin row; no service replacement and no DSH source edits.
+- insert:
+    - id: dsh-source-recovery
+      name: dsh-source-recovery

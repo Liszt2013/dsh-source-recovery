@@ -1,0 +1,16 @@
+{
+  "plugin.title": "Source Recovery",
+  "plugin.description": "Reverse everything toward source with honest recovery levels and evidence.",
+  "panel.title": "Source Recovery",
+  "panel.subtitle": "Authorized targets only; nothing is executed, nothing leaves the machine.",
+  "panel.selftest": "Run core self-test",
+  "panel.refresh": "Refresh diagnostics",
+  "panel.families": "Target families and local ceiling",
+  "panel.backends": "Toolchains",
+  "panel.levels": "Recovery levels",
+  "level.S0": "exact source",
+  "level.S1": "near-source",
+  "level.S2": "pseudo-source",
+  "level.S3": "assembly/metadata",
+  "level.S4": "behavior-only"
+}

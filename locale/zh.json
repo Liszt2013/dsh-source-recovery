@@ -1,0 +1,16 @@
+{
+  "plugin.title": "逆向源码工坊",
+  "plugin.description": "面向授权目标的逆向与源码恢复，如实标注 S0–S4 等级并保留证据。",
+  "panel.title": "逆向源码工坊",
+  "panel.subtitle": "仅限授权目标；不执行目标，不联网，不上传任何数据。",
+  "panel.selftest": "运行核心自检",
+  "panel.refresh": "刷新诊断",
+  "panel.families": "目标类型与本机上限",
+  "panel.backends": "工具链",
+  "panel.levels": "恢复等级",
+  "level.S0": "精确源码",
+  "level.S1": "近似源码",
+  "level.S2": "伪代码",
+  "level.S3": "汇编/元数据",
+  "level.S4": "仅行为"
+}
